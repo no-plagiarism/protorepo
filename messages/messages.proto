@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package kafka.message;
+
+option go_package = "./messages";
+
+
+message AddFileRequest {
+  string file_name = 1;
+  string hash = 2;
+  optional string url = 3;
+}
+
+message CheckText {
+  bool is_google_on = 1;
+  string document = 2;
+  int64 user_id = 3;
+}
