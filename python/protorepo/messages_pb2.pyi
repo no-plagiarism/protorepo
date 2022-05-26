@@ -36,6 +36,35 @@ class AddFileRequest(google.protobuf.message.Message):
     def WhichOneof(self, oneof_group: typing_extensions.Literal["_url",b"_url"]) -> typing.Optional[typing_extensions.Literal["url"]]: ...
 global___AddFileRequest = AddFileRequest
 
+class AddChildFile(google.protobuf.message.Message):
+    DESCRIPTOR: google.protobuf.descriptor.Descriptor
+    FILE_NAME_FIELD_NUMBER: builtins.int
+    HASH_FIELD_NUMBER: builtins.int
+    URL_FIELD_NUMBER: builtins.int
+    FULL_PATH_FIELD_NUMBER: builtins.int
+    PARENT_ID_FIELD_NUMBER: builtins.int
+    file_name: typing.Text
+    hash: typing.Text
+    """hash of the file"""
+
+    url: typing.Text
+    full_path: typing.Text
+    """full_path is the full path of the file on the local filesystem"""
+
+    parent_id: builtins.int
+    def __init__(self,
+        *,
+        file_name: typing.Text = ...,
+        hash: typing.Text = ...,
+        url: typing.Optional[typing.Text] = ...,
+        full_path: typing.Text = ...,
+        parent_id: builtins.int = ...,
+        ) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["_url",b"_url","url",b"url"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["_url",b"_url","file_name",b"file_name","full_path",b"full_path","hash",b"hash","parent_id",b"parent_id","url",b"url"]) -> None: ...
+    def WhichOneof(self, oneof_group: typing_extensions.Literal["_url",b"_url"]) -> typing.Optional[typing_extensions.Literal["url"]]: ...
+global___AddChildFile = AddChildFile
+
 class CheckText(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
     IS_GOOGLE_ON_FIELD_NUMBER: builtins.int
