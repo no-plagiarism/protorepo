@@ -4,7 +4,6 @@ isort:skip_file
 """
 import builtins
 import google.protobuf.descriptor
-import google.protobuf.internal.containers
 import google.protobuf.message
 import typing
 import typing_extensions
@@ -87,41 +86,6 @@ class CheckTextResult(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
     class CheckResult(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
-        class PlagiarismExtendedData(google.protobuf.message.Message):
-            DESCRIPTOR: google.protobuf.descriptor.Descriptor
-            class StartEndPair(google.protobuf.message.Message):
-                DESCRIPTOR: google.protobuf.descriptor.Descriptor
-                START_FIELD_NUMBER: builtins.int
-                END_FIELD_NUMBER: builtins.int
-                start: builtins.int
-                end: builtins.int
-                def __init__(self,
-                    *,
-                    start: builtins.int = ...,
-                    end: builtins.int = ...,
-                    ) -> None: ...
-                def ClearField(self, field_name: typing_extensions.Literal["end",b"end","start",b"start"]) -> None: ...
-
-            FILE_NAMES_FIELD_NUMBER: builtins.int
-            TEXT_FIELD_NUMBER: builtins.int
-            URLS_FIELD_NUMBER: builtins.int
-            SEQUENCES_FIELD_NUMBER: builtins.int
-            @property
-            def file_names(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[typing.Text]: ...
-            text: typing.Text
-            @property
-            def urls(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[typing.Text]: ...
-            @property
-            def sequences(self) -> google.protobuf.internal.containers.RepeatedCompositeFieldContainer[global___CheckTextResult.CheckResult.PlagiarismExtendedData.StartEndPair]: ...
-            def __init__(self,
-                *,
-                file_names: typing.Optional[typing.Iterable[typing.Text]] = ...,
-                text: typing.Text = ...,
-                urls: typing.Optional[typing.Iterable[typing.Text]] = ...,
-                sequences: typing.Optional[typing.Iterable[global___CheckTextResult.CheckResult.PlagiarismExtendedData.StartEndPair]] = ...,
-                ) -> None: ...
-            def ClearField(self, field_name: typing_extensions.Literal["file_names",b"file_names","sequences",b"sequences","text",b"text","urls",b"urls"]) -> None: ...
-
         FILE_HASH_FIELD_NUMBER: builtins.int
         FILE_NAME_FIELD_NUMBER: builtins.int
         PLAGIARISM_PERCENTAGE_FIELD_NUMBER: builtins.int
@@ -129,16 +93,14 @@ class CheckTextResult(google.protobuf.message.Message):
         file_hash: typing.Text
         file_name: typing.Text
         plagiarism_percentage: builtins.float
-        @property
-        def extended_data(self) -> global___CheckTextResult.CheckResult.PlagiarismExtendedData: ...
+        extended_data: typing.Text
         def __init__(self,
             *,
             file_hash: typing.Text = ...,
             file_name: typing.Text = ...,
             plagiarism_percentage: builtins.float = ...,
-            extended_data: typing.Optional[global___CheckTextResult.CheckResult.PlagiarismExtendedData] = ...,
+            extended_data: typing.Text = ...,
             ) -> None: ...
-        def HasField(self, field_name: typing_extensions.Literal["extended_data",b"extended_data"]) -> builtins.bool: ...
         def ClearField(self, field_name: typing_extensions.Literal["extended_data",b"extended_data","file_hash",b"file_hash","file_name",b"file_name","plagiarism_percentage",b"plagiarism_percentage"]) -> None: ...
 
     USER_ID_FIELD_NUMBER: builtins.int
@@ -154,7 +116,6 @@ class CheckTextResult(google.protobuf.message.Message):
         check_result_id: builtins.int = ...,
         check_results: typing.Optional[global___CheckTextResult.CheckResult] = ...,
         ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["_check_results",b"_check_results","check_results",b"check_results"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["_check_results",b"_check_results","check_result_id",b"check_result_id","check_results",b"check_results","user_id",b"user_id"]) -> None: ...
-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_check_results",b"_check_results"]) -> typing.Optional[typing_extensions.Literal["check_results"]]: ...
+    def HasField(self, field_name: typing_extensions.Literal["check_results",b"check_results"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["check_result_id",b"check_result_id","check_results",b"check_results","user_id",b"user_id"]) -> None: ...
 global___CheckTextResult = CheckTextResult

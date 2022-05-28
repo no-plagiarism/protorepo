@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0emessages.proto\x12\rkafka.message\"^\n\x0e\x41\x64\x64\x46ileRequest\x12\x11\n\tfile_name\x18\x01 \x01(\t\x12\x0c\n\x04hash\x18\x02 \x01(\t\x12\x10\n\x03url\x18\x03 \x01(\tH\x00\x88\x01\x01\x12\x11\n\tfull_path\x18\x04 \x01(\tB\x06\n\x04_url\"o\n\x0c\x41\x64\x64\x43hildFile\x12\x11\n\tfile_name\x18\x01 \x01(\t\x12\x0c\n\x04hash\x18\x02 \x01(\t\x12\x10\n\x03url\x18\x03 \x01(\tH\x00\x88\x01\x01\x12\x11\n\tfull_path\x18\x04 \x01(\t\x12\x11\n\tparent_id\x18\x05 \x01(\x03\x42\x06\n\x04_url\"D\n\tCheckText\x12\x14\n\x0cis_google_on\x18\x01 \x01(\x08\x12\x10\n\x08\x64ocument\x18\x02 \x01(\t\x12\x0f\n\x07user_id\x18\x03 \x01(\x03\"\x9e\x04\n\x0f\x43heckTextResult\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12\x17\n\x0f\x63heck_result_id\x18\x02 \x01(\x03\x12\x46\n\rcheck_results\x18\x03 \x01(\x0b\x32*.kafka.message.CheckTextResult.CheckResultH\x00\x88\x01\x01\x1a\x86\x03\n\x0b\x43heckResult\x12\x11\n\tfile_hash\x18\x01 \x01(\t\x12\x11\n\tfile_name\x18\x02 \x01(\t\x12\x1d\n\x15plagiarism_percentage\x18\x03 \x01(\x01\x12X\n\rextended_data\x18\x04 \x01(\x0b\x32\x41.kafka.message.CheckTextResult.CheckResult.PlagiarismExtendedData\x1a\xd7\x01\n\x16PlagiarismExtendedData\x12\x12\n\nfile_names\x18\x01 \x03(\t\x12\x0c\n\x04text\x18\x02 \x01(\t\x12\x0c\n\x04urls\x18\x03 \x03(\t\x12\x61\n\tsequences\x18\x04 \x03(\x0b\x32N.kafka.message.CheckTextResult.CheckResult.PlagiarismExtendedData.StartEndPair\x1a*\n\x0cStartEndPair\x12\r\n\x05start\x18\x01 \x01(\x03\x12\x0b\n\x03\x65nd\x18\x02 \x01(\x03\x42\x10\n\x0e_check_resultsB\x0cZ\n./messagesb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0emessages.proto\x12\rkafka.message\"^\n\x0e\x41\x64\x64\x46ileRequest\x12\x11\n\tfile_name\x18\x01 \x01(\t\x12\x0c\n\x04hash\x18\x02 \x01(\t\x12\x10\n\x03url\x18\x03 \x01(\tH\x00\x88\x01\x01\x12\x11\n\tfull_path\x18\x04 \x01(\tB\x06\n\x04_url\"o\n\x0c\x41\x64\x64\x43hildFile\x12\x11\n\tfile_name\x18\x01 \x01(\t\x12\x0c\n\x04hash\x18\x02 \x01(\t\x12\x10\n\x03url\x18\x03 \x01(\tH\x00\x88\x01\x01\x12\x11\n\tfull_path\x18\x04 \x01(\t\x12\x11\n\tparent_id\x18\x05 \x01(\x03\x42\x06\n\x04_url\"D\n\tCheckText\x12\x14\n\x0cis_google_on\x18\x01 \x01(\x08\x12\x10\n\x08\x64ocument\x18\x02 \x01(\t\x12\x0f\n\x07user_id\x18\x03 \x01(\x03\"\xe9\x01\n\x0f\x43heckTextResult\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12\x17\n\x0f\x63heck_result_id\x18\x02 \x01(\x03\x12\x41\n\rcheck_results\x18\x03 \x01(\x0b\x32*.kafka.message.CheckTextResult.CheckResult\x1ai\n\x0b\x43heckResult\x12\x11\n\tfile_hash\x18\x01 \x01(\t\x12\x11\n\tfile_name\x18\x02 \x01(\t\x12\x1d\n\x15plagiarism_percentage\x18\x03 \x01(\x01\x12\x15\n\rextended_data\x18\x04 \x01(\tB\x0cZ\n./messagesb\x06proto3')
 
 
 
@@ -23,8 +23,6 @@ _ADDCHILDFILE = DESCRIPTOR.message_types_by_name['AddChildFile']
 _CHECKTEXT = DESCRIPTOR.message_types_by_name['CheckText']
 _CHECKTEXTRESULT = DESCRIPTOR.message_types_by_name['CheckTextResult']
 _CHECKTEXTRESULT_CHECKRESULT = _CHECKTEXTRESULT.nested_types_by_name['CheckResult']
-_CHECKTEXTRESULT_CHECKRESULT_PLAGIARISMEXTENDEDDATA = _CHECKTEXTRESULT_CHECKRESULT.nested_types_by_name['PlagiarismExtendedData']
-_CHECKTEXTRESULT_CHECKRESULT_PLAGIARISMEXTENDEDDATA_STARTENDPAIR = _CHECKTEXTRESULT_CHECKRESULT_PLAGIARISMEXTENDEDDATA.nested_types_by_name['StartEndPair']
 AddFileRequest = _reflection.GeneratedProtocolMessageType('AddFileRequest', (_message.Message,), {
   'DESCRIPTOR' : _ADDFILEREQUEST,
   '__module__' : 'messages_pb2'
@@ -49,20 +47,6 @@ _sym_db.RegisterMessage(CheckText)
 CheckTextResult = _reflection.GeneratedProtocolMessageType('CheckTextResult', (_message.Message,), {
 
   'CheckResult' : _reflection.GeneratedProtocolMessageType('CheckResult', (_message.Message,), {
-
-    'PlagiarismExtendedData' : _reflection.GeneratedProtocolMessageType('PlagiarismExtendedData', (_message.Message,), {
-
-      'StartEndPair' : _reflection.GeneratedProtocolMessageType('StartEndPair', (_message.Message,), {
-        'DESCRIPTOR' : _CHECKTEXTRESULT_CHECKRESULT_PLAGIARISMEXTENDEDDATA_STARTENDPAIR,
-        '__module__' : 'messages_pb2'
-        # @@protoc_insertion_point(class_scope:kafka.message.CheckTextResult.CheckResult.PlagiarismExtendedData.StartEndPair)
-        })
-      ,
-      'DESCRIPTOR' : _CHECKTEXTRESULT_CHECKRESULT_PLAGIARISMEXTENDEDDATA,
-      '__module__' : 'messages_pb2'
-      # @@protoc_insertion_point(class_scope:kafka.message.CheckTextResult.CheckResult.PlagiarismExtendedData)
-      })
-    ,
     'DESCRIPTOR' : _CHECKTEXTRESULT_CHECKRESULT,
     '__module__' : 'messages_pb2'
     # @@protoc_insertion_point(class_scope:kafka.message.CheckTextResult.CheckResult)
@@ -74,8 +58,6 @@ CheckTextResult = _reflection.GeneratedProtocolMessageType('CheckTextResult', (_
   })
 _sym_db.RegisterMessage(CheckTextResult)
 _sym_db.RegisterMessage(CheckTextResult.CheckResult)
-_sym_db.RegisterMessage(CheckTextResult.CheckResult.PlagiarismExtendedData)
-_sym_db.RegisterMessage(CheckTextResult.CheckResult.PlagiarismExtendedData.StartEndPair)
 
 if _descriptor._USE_C_DESCRIPTORS == False:
 
@@ -88,11 +70,7 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _CHECKTEXT._serialized_start=242
   _CHECKTEXT._serialized_end=310
   _CHECKTEXTRESULT._serialized_start=313
-  _CHECKTEXTRESULT._serialized_end=855
-  _CHECKTEXTRESULT_CHECKRESULT._serialized_start=447
-  _CHECKTEXTRESULT_CHECKRESULT._serialized_end=837
-  _CHECKTEXTRESULT_CHECKRESULT_PLAGIARISMEXTENDEDDATA._serialized_start=622
-  _CHECKTEXTRESULT_CHECKRESULT_PLAGIARISMEXTENDEDDATA._serialized_end=837
-  _CHECKTEXTRESULT_CHECKRESULT_PLAGIARISMEXTENDEDDATA_STARTENDPAIR._serialized_start=795
-  _CHECKTEXTRESULT_CHECKRESULT_PLAGIARISMEXTENDEDDATA_STARTENDPAIR._serialized_end=837
+  _CHECKTEXTRESULT._serialized_end=546
+  _CHECKTEXTRESULT_CHECKRESULT._serialized_start=441
+  _CHECKTEXTRESULT_CHECKRESULT._serialized_end=546
 # @@protoc_insertion_point(module_scope)
