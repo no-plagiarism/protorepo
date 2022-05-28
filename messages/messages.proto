@@ -40,7 +40,7 @@ message CheckTextResult {
 
   int64 user_id = 1;
   int64 check_result_id = 2;
-  CheckResult check_results = 3;
+  CheckResult check_result = 3;
 }
 
 
