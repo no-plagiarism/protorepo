@@ -14,16 +14,6 @@ message AddFileRequest {
   string full_path = 4;
 }
 
-message AddChildFile{
-  string file_name = 1;
-  // hash of the file
-  string hash = 2;
-  optional string url = 3;
-  // full_path is the full path of the file on the local filesystem
-  string full_path = 4;
-  int64 parent_id = 5;
-}
-
 message CheckText {
   bool is_google_on = 1;
   string document = 2;
