@@ -11,6 +11,6 @@ format:
 
 build:
 	make cleanup
-	protoc -I=$(SRC_DIR) --go_out=$(DST_DIR) --python_out=$(DST_DIR2) $(SRC_DIR)/messages.proto --mypy_out=$(DST_DIR2)
+	protoc -I=$(SRC_DIR) --go_out=$(DST_DIR) --python_out=$(DST_DIR2) $(SRC_DIR)/messages.proto $(SRC_DIR)/hashfiles.proto --mypy_out=$(DST_DIR2)
 	touch $(DST_DIR2)/__init__.py
 	make format
