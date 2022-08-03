@@ -8,5 +8,5 @@ message HashFile {
   string name = 1;
   string url = 2;
   string content_hash = 3;
-  repeated string word_sequence_hashes = 4;
+  repeated string words = 5;
 }

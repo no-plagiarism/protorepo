@@ -16,18 +16,18 @@ class HashFile(google.protobuf.message.Message):
     NAME_FIELD_NUMBER: builtins.int
     URL_FIELD_NUMBER: builtins.int
     CONTENT_HASH_FIELD_NUMBER: builtins.int
-    WORD_SEQUENCE_HASHES_FIELD_NUMBER: builtins.int
+    WORDS_FIELD_NUMBER: builtins.int
     name: typing.Text
     url: typing.Text
     content_hash: typing.Text
     @property
-    def word_sequence_hashes(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[typing.Text]: ...
+    def words(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[typing.Text]: ...
     def __init__(self,
         *,
         name: typing.Text = ...,
         url: typing.Text = ...,
         content_hash: typing.Text = ...,
-        word_sequence_hashes: typing.Optional[typing.Iterable[typing.Text]] = ...,
+        words: typing.Optional[typing.Iterable[typing.Text]] = ...,
         ) -> None: ...
-    def ClearField(self, field_name: typing_extensions.Literal["content_hash",b"content_hash","name",b"name","url",b"url","word_sequence_hashes",b"word_sequence_hashes"]) -> None: ...
+    def ClearField(self, field_name: typing_extensions.Literal["content_hash",b"content_hash","name",b"name","url",b"url","words",b"words"]) -> None: ...
 global___HashFile = HashFile
