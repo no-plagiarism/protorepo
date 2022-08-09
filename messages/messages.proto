@@ -28,7 +28,6 @@ message CheckTextResult {
     string  extended_data = 4;
   }
 
-  int64 check_result_id = 2;
   CheckResult check_result = 3;
   string user_uid = 4;
 }
