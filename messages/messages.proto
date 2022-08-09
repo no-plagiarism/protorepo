@@ -17,7 +17,7 @@ message AddFileRequest {
 message CheckText {
   bool is_google_on = 1;
   string document = 2;
-  int64 user_id = 3;
+  string user_uid = 4;
 }
 
 message CheckTextResult {
@@ -28,9 +28,9 @@ message CheckTextResult {
     string  extended_data = 4;
   }
 
-  int64 user_id = 1;
   int64 check_result_id = 2;
   CheckResult check_result = 3;
+  string user_uid = 4;
 }
 
 

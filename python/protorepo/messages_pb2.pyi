@@ -40,17 +40,17 @@ class CheckText(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
     IS_GOOGLE_ON_FIELD_NUMBER: builtins.int
     DOCUMENT_FIELD_NUMBER: builtins.int
-    USER_ID_FIELD_NUMBER: builtins.int
+    USER_UID_FIELD_NUMBER: builtins.int
     is_google_on: builtins.bool
     document: typing.Text
-    user_id: builtins.int
+    user_uid: typing.Text
     def __init__(self,
         *,
         is_google_on: builtins.bool = ...,
         document: typing.Text = ...,
-        user_id: builtins.int = ...,
+        user_uid: typing.Text = ...,
         ) -> None: ...
-    def ClearField(self, field_name: typing_extensions.Literal["document",b"document","is_google_on",b"is_google_on","user_id",b"user_id"]) -> None: ...
+    def ClearField(self, field_name: typing_extensions.Literal["document",b"document","is_google_on",b"is_google_on","user_uid",b"user_uid"]) -> None: ...
 global___CheckText = CheckText
 
 class CheckTextResult(google.protobuf.message.Message):
@@ -74,19 +74,19 @@ class CheckTextResult(google.protobuf.message.Message):
             ) -> None: ...
         def ClearField(self, field_name: typing_extensions.Literal["extended_data",b"extended_data","file_hash",b"file_hash","file_name",b"file_name","plagiarism_percentage",b"plagiarism_percentage"]) -> None: ...
 
-    USER_ID_FIELD_NUMBER: builtins.int
     CHECK_RESULT_ID_FIELD_NUMBER: builtins.int
     CHECK_RESULT_FIELD_NUMBER: builtins.int
-    user_id: builtins.int
+    USER_UID_FIELD_NUMBER: builtins.int
     check_result_id: builtins.int
     @property
     def check_result(self) -> global___CheckTextResult.CheckResult: ...
+    user_uid: typing.Text
     def __init__(self,
         *,
-        user_id: builtins.int = ...,
         check_result_id: builtins.int = ...,
         check_result: typing.Optional[global___CheckTextResult.CheckResult] = ...,
+        user_uid: typing.Text = ...,
         ) -> None: ...
     def HasField(self, field_name: typing_extensions.Literal["check_result",b"check_result"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["check_result",b"check_result","check_result_id",b"check_result_id","user_id",b"user_id"]) -> None: ...
+    def ClearField(self, field_name: typing_extensions.Literal["check_result",b"check_result","check_result_id",b"check_result_id","user_uid",b"user_uid"]) -> None: ...
 global___CheckTextResult = CheckTextResult
