@@ -13,7 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0emessages.proto\x12\rkafka.message\"^\n\x0e\x41\x64\x64\x46ileRequest\x12\x11\n\tfile_name\x18\x01 \x01(\t\x12\x0c\n\x04hash\x18\x02 \x01(\t\x12\x10\n\x03url\x18\x03 \x01(\tH\x00\x88\x01\x01\x12\x11\n\tfull_path\x18\x04 \x01(\tB\x06\n\x04_url\"E\n\tCheckText\x12\x14\n\x0cis_google_on\x18\x01 \x01(\x08\x12\x10\n\x08\x64ocument\x18\x02 \x01(\t\x12\x10\n\x08user_uid\x18\x04 \x01(\t\"\xd0\x01\n\x0f\x43heckTextResult\x12@\n\x0c\x63heck_result\x18\x03 \x01(\x0b\x32*.kafka.message.CheckTextResult.CheckResult\x12\x10\n\x08user_uid\x18\x04 \x01(\t\x1ai\n\x0b\x43heckResult\x12\x11\n\tfile_hash\x18\x01 \x01(\t\x12\x11\n\tfile_name\x18\x02 \x01(\t\x12\x1d\n\x15plagiarism_percentage\x18\x03 \x01(\x01\x12\x15\n\rextended_data\x18\x04 \x01(\tB\x0cZ\n./messagesb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0emessages.proto\x12\rkafka.message\"^\n\x0e\x41\x64\x64\x46ileRequest\x12\x11\n\tfile_name\x18\x01 \x01(\t\x12\x0c\n\x04hash\x18\x02 \x01(\t\x12\x10\n\x03url\x18\x03 \x01(\tH\x00\x88\x01\x01\x12\x11\n\tfull_path\x18\x04 \x01(\tB\x06\n\x04_url\"E\n\tCheckText\x12\x14\n\x0cis_google_on\x18\x01 \x01(\x08\x12\x10\n\x08\x64ocument\x18\x02 \x01(\t\x12\x10\n\x08user_uid\x18\x04 \x01(\t\"\xb7\x04\n\x0f\x43heckTextResult\x12@\n\x0c\x63heck_result\x18\x03 \x01(\x0b\x32*.kafka.message.CheckTextResult.CheckResult\x12\x10\n\x08user_uid\x18\x04 \x01(\t\x1a\x9e\x01\n\x0b\x43heckResult\x12\x11\n\tfile_hash\x18\x01 \x01(\t\x12\x11\n\tfile_name\x18\x02 \x01(\t\x12\x1d\n\x15plagiarism_percentage\x18\x03 \x01(\x01\x12J\n\x11plagiarism_result\x18\x05 \x01(\x0b\x32/.kafka.message.CheckTextResult.PlagiarismResult\x1a\xca\x01\n\x10PlagiarismResult\x12\x41\n\rsimilar_files\x18\x01 \x03(\x0b\x32*.kafka.message.CheckTextResult.SimilarFile\x12:\n\tsequences\x18\x02 \x03(\x0b\x32\'.kafka.message.CheckTextResult.Sequence\x12\x0c\n\x04urls\x18\x03 \x03(\t\x12\x0c\n\x04text\x18\x04 \x01(\t\x12\x1b\n\x13symbol_replacements\x18\x05 \x03(\x03\x1a:\n\x0bSimilarFile\x12\x11\n\tfile_name\x18\x01 \x01(\t\x12\x10\n\x03url\x18\x02 \x01(\tH\x00\x88\x01\x01\x42\x06\n\x04_url\x1a&\n\x08Sequence\x12\r\n\x05start\x18\x01 \x01(\x03\x12\x0b\n\x03\x65nd\x18\x02 \x01(\x03\x42\x0cZ\n./messagesb\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'messages_pb2', globals())
@@ -26,7 +26,13 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _CHECKTEXT._serialized_start=129
   _CHECKTEXT._serialized_end=198
   _CHECKTEXTRESULT._serialized_start=201
-  _CHECKTEXTRESULT._serialized_end=409
-  _CHECKTEXTRESULT_CHECKRESULT._serialized_start=304
-  _CHECKTEXTRESULT_CHECKRESULT._serialized_end=409
+  _CHECKTEXTRESULT._serialized_end=768
+  _CHECKTEXTRESULT_CHECKRESULT._serialized_start=305
+  _CHECKTEXTRESULT_CHECKRESULT._serialized_end=463
+  _CHECKTEXTRESULT_PLAGIARISMRESULT._serialized_start=466
+  _CHECKTEXTRESULT_PLAGIARISMRESULT._serialized_end=668
+  _CHECKTEXTRESULT_SIMILARFILE._serialized_start=670
+  _CHECKTEXTRESULT_SIMILARFILE._serialized_end=728
+  _CHECKTEXTRESULT_SEQUENCE._serialized_start=730
+  _CHECKTEXTRESULT_SEQUENCE._serialized_end=768
 # @@protoc_insertion_point(module_scope)
