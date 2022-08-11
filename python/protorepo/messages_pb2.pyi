@@ -4,7 +4,6 @@ isort:skip_file
 """
 import builtins
 import google.protobuf.descriptor
-import google.protobuf.internal.containers
 import google.protobuf.message
 import typing
 import typing_extensions
@@ -61,75 +60,19 @@ class CheckTextResult(google.protobuf.message.Message):
         FILE_HASH_FIELD_NUMBER: builtins.int
         FILE_NAME_FIELD_NUMBER: builtins.int
         PLAGIARISM_PERCENTAGE_FIELD_NUMBER: builtins.int
-        PLAGIARISM_RESULT_FIELD_NUMBER: builtins.int
+        EXTENDED_DATA_FIELD_NUMBER: builtins.int
         file_hash: typing.Text
         file_name: typing.Text
         plagiarism_percentage: builtins.float
-        @property
-        def plagiarism_result(self) -> global___CheckTextResult.PlagiarismResult: ...
+        extended_data: typing.Text
         def __init__(self,
             *,
             file_hash: typing.Text = ...,
             file_name: typing.Text = ...,
             plagiarism_percentage: builtins.float = ...,
-            plagiarism_result: typing.Optional[global___CheckTextResult.PlagiarismResult] = ...,
+            extended_data: typing.Text = ...,
             ) -> None: ...
-        def HasField(self, field_name: typing_extensions.Literal["plagiarism_result",b"plagiarism_result"]) -> builtins.bool: ...
-        def ClearField(self, field_name: typing_extensions.Literal["file_hash",b"file_hash","file_name",b"file_name","plagiarism_percentage",b"plagiarism_percentage","plagiarism_result",b"plagiarism_result"]) -> None: ...
-
-    class PlagiarismResult(google.protobuf.message.Message):
-        DESCRIPTOR: google.protobuf.descriptor.Descriptor
-        SIMILAR_FILES_FIELD_NUMBER: builtins.int
-        SEQUENCES_FIELD_NUMBER: builtins.int
-        URLS_FIELD_NUMBER: builtins.int
-        TEXT_FIELD_NUMBER: builtins.int
-        SYMBOL_REPLACEMENTS_FIELD_NUMBER: builtins.int
-        @property
-        def similar_files(self) -> google.protobuf.internal.containers.RepeatedCompositeFieldContainer[global___CheckTextResult.SimilarFile]: ...
-        @property
-        def sequences(self) -> google.protobuf.internal.containers.RepeatedCompositeFieldContainer[global___CheckTextResult.Sequence]: ...
-        @property
-        def urls(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[typing.Text]: ...
-        text: typing.Text
-        @property
-        def symbol_replacements(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]: ...
-        def __init__(self,
-            *,
-            similar_files: typing.Optional[typing.Iterable[global___CheckTextResult.SimilarFile]] = ...,
-            sequences: typing.Optional[typing.Iterable[global___CheckTextResult.Sequence]] = ...,
-            urls: typing.Optional[typing.Iterable[typing.Text]] = ...,
-            text: typing.Text = ...,
-            symbol_replacements: typing.Optional[typing.Iterable[builtins.int]] = ...,
-            ) -> None: ...
-        def ClearField(self, field_name: typing_extensions.Literal["sequences",b"sequences","similar_files",b"similar_files","symbol_replacements",b"symbol_replacements","text",b"text","urls",b"urls"]) -> None: ...
-
-    class SimilarFile(google.protobuf.message.Message):
-        DESCRIPTOR: google.protobuf.descriptor.Descriptor
-        FILE_NAME_FIELD_NUMBER: builtins.int
-        URL_FIELD_NUMBER: builtins.int
-        file_name: typing.Text
-        url: typing.Text
-        def __init__(self,
-            *,
-            file_name: typing.Text = ...,
-            url: typing.Optional[typing.Text] = ...,
-            ) -> None: ...
-        def HasField(self, field_name: typing_extensions.Literal["_url",b"_url","url",b"url"]) -> builtins.bool: ...
-        def ClearField(self, field_name: typing_extensions.Literal["_url",b"_url","file_name",b"file_name","url",b"url"]) -> None: ...
-        def WhichOneof(self, oneof_group: typing_extensions.Literal["_url",b"_url"]) -> typing.Optional[typing_extensions.Literal["url"]]: ...
-
-    class Sequence(google.protobuf.message.Message):
-        DESCRIPTOR: google.protobuf.descriptor.Descriptor
-        START_FIELD_NUMBER: builtins.int
-        END_FIELD_NUMBER: builtins.int
-        start: builtins.int
-        end: builtins.int
-        def __init__(self,
-            *,
-            start: builtins.int = ...,
-            end: builtins.int = ...,
-            ) -> None: ...
-        def ClearField(self, field_name: typing_extensions.Literal["end",b"end","start",b"start"]) -> None: ...
+        def ClearField(self, field_name: typing_extensions.Literal["extended_data",b"extended_data","file_hash",b"file_hash","file_name",b"file_name","plagiarism_percentage",b"plagiarism_percentage"]) -> None: ...
 
     CHECK_RESULT_FIELD_NUMBER: builtins.int
     USER_UID_FIELD_NUMBER: builtins.int
