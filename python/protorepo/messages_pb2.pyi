@@ -58,16 +58,19 @@ class CheckFile(google.protobuf.message.Message):
     FILE_NAME_FIELD_NUMBER: builtins.int
     USER_UID_FIELD_NUMBER: builtins.int
     IS_GOOGLE_ON_FIELD_NUMBER: builtins.int
+    FULL_PATH_FIELD_NUMBER: builtins.int
     file_name: typing.Text
     user_uid: typing.Text
     is_google_on: builtins.bool
+    full_path: typing.Text
     def __init__(self,
         *,
         file_name: typing.Text = ...,
         user_uid: typing.Text = ...,
         is_google_on: builtins.bool = ...,
+        full_path: typing.Text = ...,
         ) -> None: ...
-    def ClearField(self, field_name: typing_extensions.Literal["file_name",b"file_name","is_google_on",b"is_google_on","user_uid",b"user_uid"]) -> None: ...
+    def ClearField(self, field_name: typing_extensions.Literal["file_name",b"file_name","full_path",b"full_path","is_google_on",b"is_google_on","user_uid",b"user_uid"]) -> None: ...
 global___CheckFile = CheckFile
 
 class CheckTextResult(google.protobuf.message.Message):
