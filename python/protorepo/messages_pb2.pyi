@@ -53,6 +53,23 @@ class CheckText(google.protobuf.message.Message):
     def ClearField(self, field_name: typing_extensions.Literal["document",b"document","is_google_on",b"is_google_on","user_uid",b"user_uid"]) -> None: ...
 global___CheckText = CheckText
 
+class CheckFile(google.protobuf.message.Message):
+    DESCRIPTOR: google.protobuf.descriptor.Descriptor
+    FILE_NAME_FIELD_NUMBER: builtins.int
+    USER_UID_FIELD_NUMBER: builtins.int
+    IS_GOOGLE_ON_FIELD_NUMBER: builtins.int
+    file_name: typing.Text
+    user_uid: typing.Text
+    is_google_on: builtins.bool
+    def __init__(self,
+        *,
+        file_name: typing.Text = ...,
+        user_uid: typing.Text = ...,
+        is_google_on: builtins.bool = ...,
+        ) -> None: ...
+    def ClearField(self, field_name: typing_extensions.Literal["file_name",b"file_name","is_google_on",b"is_google_on","user_uid",b"user_uid"]) -> None: ...
+global___CheckFile = CheckFile
+
 class CheckTextResult(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
     class CheckResult(google.protobuf.message.Message):

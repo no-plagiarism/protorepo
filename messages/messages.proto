@@ -20,6 +20,12 @@ message CheckText {
   string user_uid = 4;
 }
 
+message  CheckFile {
+  string file_name = 1;
+  string user_uid = 2;
+  bool is_google_on = 3;
+}
+
 message CheckTextResult {
   message CheckResult{
     string file_hash = 1;
