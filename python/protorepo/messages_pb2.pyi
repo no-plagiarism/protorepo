@@ -80,19 +80,19 @@ class CheckTextResult(google.protobuf.message.Message):
         FILE_HASH_FIELD_NUMBER: builtins.int
         FILE_NAME_FIELD_NUMBER: builtins.int
         PLAGIARISM_PERCENTAGE_FIELD_NUMBER: builtins.int
-        EXTENDED_DATA_FIELD_NUMBER: builtins.int
+        EXTENDED_DATA_URL_FIELD_NUMBER: builtins.int
         file_hash: typing.Text
         file_name: typing.Text
         plagiarism_percentage: builtins.float
-        extended_data: typing.Text
+        extended_data_url: typing.Text
         def __init__(self,
             *,
             file_hash: typing.Text = ...,
             file_name: typing.Text = ...,
             plagiarism_percentage: builtins.float = ...,
-            extended_data: typing.Text = ...,
+            extended_data_url: typing.Text = ...,
             ) -> None: ...
-        def ClearField(self, field_name: typing_extensions.Literal["extended_data",b"extended_data","file_hash",b"file_hash","file_name",b"file_name","plagiarism_percentage",b"plagiarism_percentage"]) -> None: ...
+        def ClearField(self, field_name: typing_extensions.Literal["extended_data_url",b"extended_data_url","file_hash",b"file_hash","file_name",b"file_name","plagiarism_percentage",b"plagiarism_percentage"]) -> None: ...
 
     CHECK_RESULT_FIELD_NUMBER: builtins.int
     USER_UID_FIELD_NUMBER: builtins.int
