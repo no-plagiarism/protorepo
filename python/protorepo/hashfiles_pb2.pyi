@@ -17,19 +17,22 @@ class HashFile(google.protobuf.message.Message):
     URL_FIELD_NUMBER: builtins.int
     CONTENT_HASH_FIELD_NUMBER: builtins.int
     WORDS_FIELD_NUMBER: builtins.int
+    TEXT_LINK_FIELD_NUMBER: builtins.int
     name: typing.Text
     url: typing.Text
     content_hash: typing.Text
     @property
     def words(self) -> google.protobuf.internal.containers.RepeatedCompositeFieldContainer[global___WordAndPosition]: ...
+    text_link: typing.Text
     def __init__(self,
         *,
         name: typing.Text = ...,
         url: typing.Text = ...,
         content_hash: typing.Text = ...,
         words: typing.Optional[typing.Iterable[global___WordAndPosition]] = ...,
+        text_link: typing.Text = ...,
         ) -> None: ...
-    def ClearField(self, field_name: typing_extensions.Literal["content_hash",b"content_hash","name",b"name","url",b"url","words",b"words"]) -> None: ...
+    def ClearField(self, field_name: typing_extensions.Literal["content_hash",b"content_hash","name",b"name","text_link",b"text_link","url",b"url","words",b"words"]) -> None: ...
 global___HashFile = HashFile
 
 class WordAndPosition(google.protobuf.message.Message):

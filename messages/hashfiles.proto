@@ -9,6 +9,7 @@ message HashFile {
   string url = 2;
   string content_hash = 3;
   repeated WordAndPosition words = 6;
+  string text_link = 7;
 }
 
 message WordAndPosition {
