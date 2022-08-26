@@ -8,5 +8,11 @@ message HashFile {
   string name = 1;
   string url = 2;
   string content_hash = 3;
-  repeated string words = 5;
+  repeated WordAndPosition words = 6;
+}
+
+message WordAndPosition {
+  string word = 1;
+  int64 start_position = 2;
+  int64 end_position = 3;
 }

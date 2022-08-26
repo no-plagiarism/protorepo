@@ -13,7 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0fhashfiles.proto\x12\thashfiles\"J\n\x08HashFile\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03url\x18\x02 \x01(\t\x12\x14\n\x0c\x63ontent_hash\x18\x03 \x01(\t\x12\r\n\x05words\x18\x05 \x03(\tB\rZ\x0b./hashfilesb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0fhashfiles.proto\x12\thashfiles\"f\n\x08HashFile\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03url\x18\x02 \x01(\t\x12\x14\n\x0c\x63ontent_hash\x18\x03 \x01(\t\x12)\n\x05words\x18\x06 \x03(\x0b\x32\x1a.hashfiles.WordAndPosition\"M\n\x0fWordAndPosition\x12\x0c\n\x04word\x18\x01 \x01(\t\x12\x16\n\x0estart_position\x18\x02 \x01(\x03\x12\x14\n\x0c\x65nd_position\x18\x03 \x01(\x03\x42\rZ\x0b./hashfilesb\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'hashfiles_pb2', globals())
@@ -22,5 +22,7 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   DESCRIPTOR._options = None
   DESCRIPTOR._serialized_options = b'Z\013./hashfiles'
   _HASHFILE._serialized_start=30
-  _HASHFILE._serialized_end=104
+  _HASHFILE._serialized_end=132
+  _WORDANDPOSITION._serialized_start=134
+  _WORDANDPOSITION._serialized_end=211
 # @@protoc_insertion_point(module_scope)

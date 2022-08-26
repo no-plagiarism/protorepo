@@ -21,13 +21,30 @@ class HashFile(google.protobuf.message.Message):
     url: typing.Text
     content_hash: typing.Text
     @property
-    def words(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[typing.Text]: ...
+    def words(self) -> google.protobuf.internal.containers.RepeatedCompositeFieldContainer[global___WordAndPosition]: ...
     def __init__(self,
         *,
         name: typing.Text = ...,
         url: typing.Text = ...,
         content_hash: typing.Text = ...,
-        words: typing.Optional[typing.Iterable[typing.Text]] = ...,
+        words: typing.Optional[typing.Iterable[global___WordAndPosition]] = ...,
         ) -> None: ...
     def ClearField(self, field_name: typing_extensions.Literal["content_hash",b"content_hash","name",b"name","url",b"url","words",b"words"]) -> None: ...
 global___HashFile = HashFile
+
+class WordAndPosition(google.protobuf.message.Message):
+    DESCRIPTOR: google.protobuf.descriptor.Descriptor
+    WORD_FIELD_NUMBER: builtins.int
+    START_POSITION_FIELD_NUMBER: builtins.int
+    END_POSITION_FIELD_NUMBER: builtins.int
+    word: typing.Text
+    start_position: builtins.int
+    end_position: builtins.int
+    def __init__(self,
+        *,
+        word: typing.Text = ...,
+        start_position: builtins.int = ...,
+        end_position: builtins.int = ...,
+        ) -> None: ...
+    def ClearField(self, field_name: typing_extensions.Literal["end_position",b"end_position","start_position",b"start_position","word",b"word"]) -> None: ...
+global___WordAndPosition = WordAndPosition
