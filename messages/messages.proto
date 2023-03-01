@@ -9,7 +9,7 @@ message AddFileRequest {
   string file_name = 1;
   // hash of the file
   string hash = 2;
-  optional string url = 3;
+  string url = 3;
   // full_path is the full path of the file on the local filesystem
   string full_path = 4;
 }

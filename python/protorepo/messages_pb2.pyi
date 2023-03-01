@@ -5,105 +5,124 @@ isort:skip_file
 import builtins
 import google.protobuf.descriptor
 import google.protobuf.message
-import typing
-import typing_extensions
+import sys
+
+if sys.version_info >= (3, 8):
+    import typing as typing_extensions
+else:
+    import typing_extensions
 
 DESCRIPTOR: google.protobuf.descriptor.FileDescriptor
 
+@typing_extensions.final
 class AddFileRequest(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
+
     FILE_NAME_FIELD_NUMBER: builtins.int
     HASH_FIELD_NUMBER: builtins.int
     URL_FIELD_NUMBER: builtins.int
     FULL_PATH_FIELD_NUMBER: builtins.int
-    file_name: typing.Text
-    hash: typing.Text
+    file_name: builtins.str
+    hash: builtins.str
     """hash of the file"""
-
-    url: typing.Text
-    full_path: typing.Text
+    url: builtins.str
+    full_path: builtins.str
     """full_path is the full path of the file on the local filesystem"""
-
-    def __init__(self,
+    def __init__(
+        self,
         *,
-        file_name: typing.Text = ...,
-        hash: typing.Text = ...,
-        url: typing.Optional[typing.Text] = ...,
-        full_path: typing.Text = ...,
-        ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["_url",b"_url","url",b"url"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["_url",b"_url","file_name",b"file_name","full_path",b"full_path","hash",b"hash","url",b"url"]) -> None: ...
-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_url",b"_url"]) -> typing.Optional[typing_extensions.Literal["url"]]: ...
+        file_name: builtins.str = ...,
+        hash: builtins.str = ...,
+        url: builtins.str = ...,
+        full_path: builtins.str = ...,
+    ) -> None: ...
+    def ClearField(self, field_name: typing_extensions.Literal["file_name", b"file_name", "full_path", b"full_path", "hash", b"hash", "url", b"url"]) -> None: ...
+
 global___AddFileRequest = AddFileRequest
 
+@typing_extensions.final
 class CheckText(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
+
     IS_GOOGLE_ON_FIELD_NUMBER: builtins.int
     DOCUMENT_FIELD_NUMBER: builtins.int
     USER_UID_FIELD_NUMBER: builtins.int
     is_google_on: builtins.bool
-    document: typing.Text
-    user_uid: typing.Text
-    def __init__(self,
+    document: builtins.str
+    user_uid: builtins.str
+    def __init__(
+        self,
         *,
         is_google_on: builtins.bool = ...,
-        document: typing.Text = ...,
-        user_uid: typing.Text = ...,
-        ) -> None: ...
-    def ClearField(self, field_name: typing_extensions.Literal["document",b"document","is_google_on",b"is_google_on","user_uid",b"user_uid"]) -> None: ...
+        document: builtins.str = ...,
+        user_uid: builtins.str = ...,
+    ) -> None: ...
+    def ClearField(self, field_name: typing_extensions.Literal["document", b"document", "is_google_on", b"is_google_on", "user_uid", b"user_uid"]) -> None: ...
+
 global___CheckText = CheckText
 
+@typing_extensions.final
 class CheckFile(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
+
     FILE_NAME_FIELD_NUMBER: builtins.int
     USER_UID_FIELD_NUMBER: builtins.int
     IS_GOOGLE_ON_FIELD_NUMBER: builtins.int
     FULL_PATH_FIELD_NUMBER: builtins.int
-    file_name: typing.Text
-    user_uid: typing.Text
+    file_name: builtins.str
+    user_uid: builtins.str
     is_google_on: builtins.bool
-    full_path: typing.Text
-    def __init__(self,
+    full_path: builtins.str
+    def __init__(
+        self,
         *,
-        file_name: typing.Text = ...,
-        user_uid: typing.Text = ...,
+        file_name: builtins.str = ...,
+        user_uid: builtins.str = ...,
         is_google_on: builtins.bool = ...,
-        full_path: typing.Text = ...,
-        ) -> None: ...
-    def ClearField(self, field_name: typing_extensions.Literal["file_name",b"file_name","full_path",b"full_path","is_google_on",b"is_google_on","user_uid",b"user_uid"]) -> None: ...
+        full_path: builtins.str = ...,
+    ) -> None: ...
+    def ClearField(self, field_name: typing_extensions.Literal["file_name", b"file_name", "full_path", b"full_path", "is_google_on", b"is_google_on", "user_uid", b"user_uid"]) -> None: ...
+
 global___CheckFile = CheckFile
 
+@typing_extensions.final
 class CheckTextResult(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
+
+    @typing_extensions.final
     class CheckResult(google.protobuf.message.Message):
         DESCRIPTOR: google.protobuf.descriptor.Descriptor
+
         FILE_HASH_FIELD_NUMBER: builtins.int
         FILE_NAME_FIELD_NUMBER: builtins.int
         PLAGIARISM_PERCENTAGE_FIELD_NUMBER: builtins.int
         EXTENDED_DATA_URL_FIELD_NUMBER: builtins.int
-        file_hash: typing.Text
-        file_name: typing.Text
+        file_hash: builtins.str
+        file_name: builtins.str
         plagiarism_percentage: builtins.float
-        extended_data_url: typing.Text
-        def __init__(self,
+        extended_data_url: builtins.str
+        def __init__(
+            self,
             *,
-            file_hash: typing.Text = ...,
-            file_name: typing.Text = ...,
+            file_hash: builtins.str = ...,
+            file_name: builtins.str = ...,
             plagiarism_percentage: builtins.float = ...,
-            extended_data_url: typing.Text = ...,
-            ) -> None: ...
-        def ClearField(self, field_name: typing_extensions.Literal["extended_data_url",b"extended_data_url","file_hash",b"file_hash","file_name",b"file_name","plagiarism_percentage",b"plagiarism_percentage"]) -> None: ...
+            extended_data_url: builtins.str = ...,
+        ) -> None: ...
+        def ClearField(self, field_name: typing_extensions.Literal["extended_data_url", b"extended_data_url", "file_hash", b"file_hash", "file_name", b"file_name", "plagiarism_percentage", b"plagiarism_percentage"]) -> None: ...
 
     CHECK_RESULT_FIELD_NUMBER: builtins.int
     USER_UID_FIELD_NUMBER: builtins.int
     @property
     def check_result(self) -> global___CheckTextResult.CheckResult: ...
-    user_uid: typing.Text
-    def __init__(self,
+    user_uid: builtins.str
+    def __init__(
+        self,
         *,
-        check_result: typing.Optional[global___CheckTextResult.CheckResult] = ...,
-        user_uid: typing.Text = ...,
-        ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["check_result",b"check_result"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["check_result",b"check_result","user_uid",b"user_uid"]) -> None: ...
+        check_result: global___CheckTextResult.CheckResult | None = ...,
+        user_uid: builtins.str = ...,
+    ) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["check_result", b"check_result"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["check_result", b"check_result", "user_uid", b"user_uid"]) -> None: ...
+
 global___CheckTextResult = CheckTextResult

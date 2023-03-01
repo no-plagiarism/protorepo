@@ -3,51 +3,82 @@
 isort:skip_file
 """
 import builtins
+import collections.abc
 import google.protobuf.descriptor
 import google.protobuf.internal.containers
 import google.protobuf.message
-import typing
-import typing_extensions
+import sys
+
+if sys.version_info >= (3, 8):
+    import typing as typing_extensions
+else:
+    import typing_extensions
 
 DESCRIPTOR: google.protobuf.descriptor.FileDescriptor
 
+@typing_extensions.final
 class HashFile(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
+
     NAME_FIELD_NUMBER: builtins.int
     URL_FIELD_NUMBER: builtins.int
     CONTENT_HASH_FIELD_NUMBER: builtins.int
     WORDS_FIELD_NUMBER: builtins.int
     TEXT_LINK_FIELD_NUMBER: builtins.int
-    name: typing.Text
-    url: typing.Text
-    content_hash: typing.Text
+    name: builtins.str
+    url: builtins.str
+    content_hash: builtins.str
     @property
     def words(self) -> google.protobuf.internal.containers.RepeatedCompositeFieldContainer[global___WordAndPosition]: ...
-    text_link: typing.Text
-    def __init__(self,
+    text_link: builtins.str
+    def __init__(
+        self,
         *,
-        name: typing.Text = ...,
-        url: typing.Text = ...,
-        content_hash: typing.Text = ...,
-        words: typing.Optional[typing.Iterable[global___WordAndPosition]] = ...,
-        text_link: typing.Text = ...,
-        ) -> None: ...
-    def ClearField(self, field_name: typing_extensions.Literal["content_hash",b"content_hash","name",b"name","text_link",b"text_link","url",b"url","words",b"words"]) -> None: ...
+        name: builtins.str = ...,
+        url: builtins.str = ...,
+        content_hash: builtins.str = ...,
+        words: collections.abc.Iterable[global___WordAndPosition] | None = ...,
+        text_link: builtins.str = ...,
+    ) -> None: ...
+    def ClearField(self, field_name: typing_extensions.Literal["content_hash", b"content_hash", "name", b"name", "text_link", b"text_link", "url", b"url", "words", b"words"]) -> None: ...
+
 global___HashFile = HashFile
 
+@typing_extensions.final
 class WordAndPosition(google.protobuf.message.Message):
     DESCRIPTOR: google.protobuf.descriptor.Descriptor
+
     WORD_FIELD_NUMBER: builtins.int
     START_POSITION_FIELD_NUMBER: builtins.int
     END_POSITION_FIELD_NUMBER: builtins.int
-    word: typing.Text
+    word: builtins.str
     start_position: builtins.int
     end_position: builtins.int
-    def __init__(self,
+    def __init__(
+        self,
         *,
-        word: typing.Text = ...,
+        word: builtins.str = ...,
         start_position: builtins.int = ...,
         end_position: builtins.int = ...,
-        ) -> None: ...
-    def ClearField(self, field_name: typing_extensions.Literal["end_position",b"end_position","start_position",b"start_position","word",b"word"]) -> None: ...
+    ) -> None: ...
+    def ClearField(self, field_name: typing_extensions.Literal["end_position", b"end_position", "start_position", b"start_position", "word", b"word"]) -> None: ...
+
 global___WordAndPosition = WordAndPosition
+
+@typing_extensions.final
+class WikiData(google.protobuf.message.Message):
+    DESCRIPTOR: google.protobuf.descriptor.Descriptor
+
+    TITLE_FIELD_NUMBER: builtins.int
+    TEXT_FIELD_NUMBER: builtins.int
+    title: builtins.str
+    text: builtins.str
+    def __init__(
+        self,
+        *,
+        title: builtins.str = ...,
+        text: builtins.str = ...,
+    ) -> None: ...
+    def ClearField(self, field_name: typing_extensions.Literal["text", b"text", "title", b"title"]) -> None: ...
+
+global___WikiData = WikiData

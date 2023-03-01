@@ -17,3 +17,8 @@ message WordAndPosition {
   int64 start_position = 2;
   int64 end_position = 3;
 }
+
+message WikiData {
+  string title = 1;
+  string text = 2;
+}
